@@ -1,0 +1,7 @@
+.node_modules
+.env
+.git
+build
+build_version
+dev_version
+package-lock.json

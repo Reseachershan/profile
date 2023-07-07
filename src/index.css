@@ -1,0 +1,101 @@
+:root {
+  --dark: #101820FF;
+  --light: #e7e7e7;
+  --gray: #939598;
+  --yellow: #FEE715FF;
+}
+
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  width: 8px !important;
+  background: #101820FF;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FEE715FF;
+  width: 8px !important;
+  transition: 0.25s ease-in-out;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bg-theme-yellow {
+  background-color: var(--yellow) !important;
+}
+
+.clr-theme-yellow {
+  color: var(--yellow) !important;
+}
+
+.bg-theme-gray {
+  background-color: var(--gray) !important;
+}
+
+.clr-theme-gray {
+  color: var(--gray) !important;
+}
+
+.bg-theme-dark {
+  background-color: var(--dark) !important;
+}
+
+.clr-theme-dark {
+  color: var(--dark) !important;
+}
+
+.bg-theme-light {
+  background-color: var(--light) !important;
+}
+
+.clr-theme-light {
+  color: var(--light) !important;
+}
+
+.view{
+  color:'black'
+}
+.view:hover{
+  color: red;
+}
+
+/* .div{
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.div:hover{
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+} */

@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  dev_version:
+    build:
+      dockerfile: ./dev_version/Dockerfile
+      context: .
+    environment:
+      PORT: 3000
+    volumes:
+      - ./package.json:/app/package.json
+      - ./src:/app/src
+    labels:
+      traefik.enable: true
+      traefik.http.routers.portfolio.rule: Host(`asimabbasme.demo1.zsoft.link`)
+      traefik.http.routers.portfolio.entrypoints: http
+      traefik.http.services.portfolio.loadbalancer.server.port: 3000
+
+  build_version:
+    build:
+      dockerfile: ./build_version/Dockerfile
+      context: .
+    environment:
+      PORT: 5000
+    volumes:
+      - ./package.json:/app/package.json
+      - ./src:/app/src
+    labels:
+      traefik.enable: true
+      traefik.http.routers.portfolio-build.rule: Host(`asimabbas.me`)
+      traefik.http.routers.portfolio-build.entrypoints: http
+      traefik.http.services.portfolio-build.loadbalancer.server.port: 5000
